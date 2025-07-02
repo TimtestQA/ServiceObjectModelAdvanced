@@ -1,0 +1,17 @@
+
+services:
+  users-api-test:
+    image: api:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    shm_size: 2gb
+    volumes:
+      - ./:/usr/workspace
+      - /dev/shm:/dev/shm
+    command: /bin/sh -c "BASE_URL=$$BASE_URL pytest -sv -o log_cli=true --alluredir=report -m=$$MARKER"
+    environment:
+      BASE_URL: ${BASE_URL}
+      MARKER: ${MARKER:-users}
+    tty: true
+

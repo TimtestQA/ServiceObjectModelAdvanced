@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Test reports and logs
+reports/
+logs/
+*.log
+allure-results/
+allure-report/
+pytest_report.html
+coverage/
+.coverage
+htmlcov/
+
+# Selenium specific
+geckodriver.log
+chromedriver.log
+*.trace
+screenshots/
+downloads/
+
+# OS specific
+.DS_Store
+Thumbs.db
